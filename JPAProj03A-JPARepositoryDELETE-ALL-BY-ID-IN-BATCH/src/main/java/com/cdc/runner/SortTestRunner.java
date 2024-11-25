@@ -38,6 +38,12 @@ public class SortTestRunner implements CommandLineRunner {
 		}*/
 		// Page By page
 		// service.showDoctorsPageByPage(2);
+		// Deleteallbyidinbatch
+		try {
+			System.out.println(service.deleteDoctorsByIdsInBatch(678, 901));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
