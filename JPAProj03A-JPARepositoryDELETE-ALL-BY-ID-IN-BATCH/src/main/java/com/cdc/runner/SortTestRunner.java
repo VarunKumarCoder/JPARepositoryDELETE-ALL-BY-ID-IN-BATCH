@@ -1,5 +1,7 @@
 package com.cdc.runner;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -37,10 +39,10 @@ public class SortTestRunner implements CommandLineRunner {
 			e.printStackTrace();
 		}*/
 		// Page By page
-		// service.showDoctorsPageByPage(2);
+		service.showDoctorsPageByPage(2);
 		// Deleteallbyidinbatch
 		try {
-			System.out.println(service.deleteDoctorsByIdsInBatch(678, 901));
+			System.out.println(service.deleteDoctorsByIdsInBatch(List.of(1, 2)));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
